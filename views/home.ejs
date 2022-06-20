@@ -1,0 +1,126 @@
+<html>
+    <head>
+        <title> <%= title %> </title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <script src="https://kit.fontawesome.com/0a9b7b3b75.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" type="text/css" href="/css/home.css">
+    </head>
+
+    <body>
+
+        <header>
+
+            <div class="header-container">
+                <h1 id="heading">TODO App</h1>
+            </div>
+
+
+        </header>
+
+        <section class="main">
+
+            
+        <div class="create-todo-container">
+
+            <form name="form" action="/createtodolist", method="POST">
+
+            <div class="description-container">
+                <label for="description">description</label>
+                <input type="text" name="description" id="description" placeholder="What do you need to do?" required>
+            </div>
+
+      
+            <div class="category-and-duedate-container">
+
+            <div class="category-container">
+
+                <label for="category">category</label>
+                <div class="select-menu">
+
+                    <select name="category" id="my_Select">
+                        <option value="choose-category" disabled>Choose a Category</option>
+                        <option value="Personal" class="personal">Personal</option>
+                        <option value="Work" class="work">Work</option>
+                        <option value="School" class="school">School</option>
+                        <option value="Cleaning" class="cleaning">Cleaning</option>
+                        <option value="Others" class="others">Others</option>
+                    </select>
+                </div> 
+
+            </div>
+
+                
+
+            <div class="due-date-container">
+                    <label for="due-date" id="due-date-label">due date</label>
+                    <input id="due-date-input" name="duedate"  value="" type="date" data-date-format="DD/MM/YYYY">
+            </div>
+                
+        </div>
+
+
+        <div class="button-container">
+
+            <button id="add-task-btn" type="submit">
+                <i class="fa-solid fa-plus"></i>
+                Add Task
+            </button>
+
+        </div>
+
+    </form>
+
+        </section>
+
+
+        <form action="delete-contact" methods="GET">
+
+        <div class="display-todo-list-container">
+
+            <div class="todo-list-card-container">
+
+                <% for(let i of task_list) { %>
+
+                     <div class="todo-card  card border-success mb-3" style="max-width: 18rem;">
+                        <div class="card-header bg-transparent bg-info mb-3"> <input class="checkbox" type="checkbox" name="<%= i._id %>"> </div>
+                        <div class="card-body">
+                        <h5 class="card-title"><p class="task-category" id="task-category"><%= i.category %>         
+                        </p></h5>
+                          <p class="card-text">   
+                             <p class="task-description" id="task-description"><%= i.description %> </p>
+                          <p class="due-date" id="due-date">
+                            <i class="fa-solid fa-calendar-days"></i>
+                            <%= i.duedate %>
+                        </p> 
+                        </p>
+                        </div>
+
+                      </div>
+              
+                      <br><br>    
+
+                <% } %>
+
+            </div>
+        </div>
+
+        <button id="delete-task-btn">
+            <i class="fa-solid fa-trash-can"></i>
+                  delete Tasks
+         
+          </button>  
+    </form>
+
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script type="text/javascript" src="/js/home.js"></script>
+    </body>
+</html>
+
+
+
+
+
+
+

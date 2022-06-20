@@ -1,0 +1,283 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.header-container {
+    margin: 20px 0px 10px 0px;
+}
+
+.header-container h1 {
+    color: gray;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 40px;
+    text-align: center;
+
+}
+
+.create-todo-container {
+    margin: 0 100px;
+}
+
+.create-todo-container label {
+    position: relative;
+    top: 10px;
+    left: 10px;
+    text-transform: uppercase;
+    font-family: sans-serif;
+    font-size: 14px;
+}
+
+
+.create-todo-container .description-container {
+    border-radius: 10px;
+    border: 2px solid lightgray;
+    box-shadow: 0 0 30px rgba(224, 233, 228, 0.89);
+    padding: 20px 10px;
+
+}
+
+.create-todo-container .description-container:hover,
+.description-container input:hover {
+    background-color: rgb(218, 216, 214);
+
+}
+
+
+.description-container input {
+    position: relative;
+    left: 10px;
+    display: block;
+    border-width: 0px;
+    border: none;
+    outline: none;
+    width: 100%;
+    height: 40px;
+    color: blue;
+    font-size: 18px;
+}
+
+
+.category-and-duedate-container {
+
+    display: flex;
+
+
+}
+
+
+.category-container {
+    display: inline-block;
+    width: 50%;
+    border: 2px solid lightgray;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 30px rgba(224, 233, 228, 0.89);
+
+}
+
+
+.category-container:hover {
+    background-color: rgb(218, 216, 214);
+}
+
+
+.select-menu select {
+    padding: 10px;
+    width: 500px;
+    height: 50px;
+    border: none;
+    font-size: 20px;
+    outline: none;
+    cursor: pointer;
+
+}
+
+.select-menu:before {
+    text-align: center;
+    font-size: 28px;
+    font-family: sans-serif;
+    background: #007ce0;
+    border: 1px solid darkblue;
+    pointer-events: none;
+}
+
+.select-menu .Personal {
+    color: greenyellow;
+
+}
+
+.select-menu .Work {
+    color: orange
+}
+
+.select-menu .School {
+    color: darkviolet;
+}
+
+.select-menu .Cleaning {
+    color: royalblue;
+}
+
+.select-menu .Others {
+    color: darkgoldenrod;
+}
+
+
+
+.due-date-container {
+    display: block;
+    width: 50%;
+    border: 2px solid lightgray;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 30px rgba(224, 233, 228, 0.89);
+
+
+}
+
+.due-date-container:hover,
+.due-date-container #due-date-input:hover {
+    background-color: rgb(218, 216, 214);
+}
+
+
+.due-date-container #due-date-input {
+    position: relative;
+    top: 5px;
+    left: 10px;
+    width: 470px;
+    border: none;
+
+}
+
+.button-container {
+
+    text-align: center;
+    margin-top: 20px;
+
+
+}
+
+
+#add-task-btn,
+#delete-task-btn,
+#edit-task-btn {
+    text-transform: uppercase;
+    color: #fff;
+    padding: 20px 20px 20px 8px;
+    border: none;
+    border-radius: 5px;
+    font-size: 15px;
+    font-weight: 600;
+    font-family: sans-serif;
+
+}
+
+.button-container #add-task-btn {
+    position: absolute;
+    top: 340px;
+    left: 510px;
+    background-color: black;
+    width: 150px;
+    box-shadow: 0 0 30px rgba(119, 121, 120, 0.89);
+
+
+}
+
+
+.button-container #add-task-btn:active {
+
+    background-color: greenyellow;
+    color: darkgreen;
+
+}
+
+#add-task-btn .fa-plus {
+    padding: 0 5px 0 0;
+    font-size: large;
+}
+
+
+
+.todo-list-card-container {
+    position: absolute;
+    left: 120px;
+    top: 400px;
+    max-width: 1000px;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+}
+
+
+.todo-card {
+    border-radius: 10px;
+    min-width: 250px;
+    margin: 20px 20px;
+    box-shadow: 0 0 30px rgba(8, 172, 70, 0.582);
+}
+
+.todo-card:hover {
+    background-color: rgb(217, 255, 47);
+}
+
+.checkbox {
+    width: 25px;
+    height: 25px;
+    border-radius: 5px;
+
+}
+
+.task-category {
+    font-family: sans-serif;
+    border: 1px solid cyan;
+    width: fit-content;
+    padding: 10px 8px 10px 8px;
+    background-color: cyan;
+    border-radius: 5px;
+
+}
+
+.task-description {
+    color: blue;
+    font-size: 18px;
+    font-family: sans-serif;
+}
+
+.due-date {
+    color: darkmagenta;
+    font-size: 18px;
+}
+
+.fa-calendar-days {
+    color: darkmagenta;
+
+}
+
+
+#delete-task-btn {
+    position: absolute;
+    left: 690px;
+    top: 340px;
+    background-color: red;
+    box-shadow: 0 0 30px rgba(119, 121, 120, 0.89);
+
+}
+
+
+
+#delete-task-btn .fa-trash-can {
+    font-size: large;
+    padding: 0 5px 0 0;
+}
+
+#delete-task-btn:focus {
+    background-color: darkred;
+    color: black;
+}

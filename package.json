@@ -1,0 +1,18 @@
+{
+  "name": "todo_list_app",
+  "version": "1.0.0",
+  "description": "TODO List Web Application",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Kartik Sarwan",
+  "license": "ISC",
+  "dependencies": {
+    "data-parser": "^1.0.1",
+    "ejs": "^3.1.8",
+    "express": "^4.18.1",
+    "mongoose": "^6.3.8"
+  }
+}
